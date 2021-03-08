@@ -1,0 +1,57 @@
+<div class="container ">
+    <div class="row form-inline"  >
+        <div class="col-md-3"></div>
+        <div class="col-md-6" style="background-color:#a5a5a5;">
+            <div class="container">
+                <div class="row" >
+                  <div class="col-md-12 pull-right">
+                      <h5 style="float: right;"> {{userType}}</h5>
+                  </div>         
+                </div>
+                <div class="row " >
+                    <div class="col-md-12 ">
+                        <br/>
+                    </div>         
+                  </div>
+                <div class="row"  >
+                    <label style="display: block;" class="col-md-6" >Gold Price(Per Gram)</label>
+                    <input type="number" [(ngModel)]="goldModel.GoldRate" class=" col-md-4" id="rate">
+                </div>
+                <div class="row" style="margin-top: 2%;">
+                    <label style="display: block;" for="wieght" class="col-md-6" >Weight(Grams)</label>
+                    <input type="number"   [(ngModel)]="goldModel.GoldWeight"class=" col-md-4" id="wieght">
+                </div>
+                <div class="row" style="margin-top: 2%;">
+                    <label style="display: block;" for="price" class="col-md-6">Total Price</label>
+                    <input disabled type="text"  [(ngModel)]="msg" class=" col-md-4" id="price">
+                </div>
+                <div class="row" style="margin-top: 2%;" *ngIf="enableDiscount">
+                    <label style="display: block;" for="discount" class="col-md-6">Discount %</label>
+                    <input type="number"  [(ngModel)]="goldModel.GoldDiscount" disabled class=" col-md-4" id="discount" value="2">
+                </div>
+                <div class="row" style="margin-top: 7%;">
+               
+                    <button (click) ="onSubmit()" class="btn btn-primary " style="background-color: #757170;float: right;">
+                        <span>Calcuate</span>
+                        
+                    </button>
+                    <button class="btn btn-primary " style="background-color: #757170;float: right;">
+                        <span>Print To Screen</span>  
+                    </button>
+                    <button class="btn btn-primary " style="background-color: #757170;float: right;">
+                        <span>Print To File</span>  
+                    </button>
+                    <button class="btn btn-primary " style="background-color: #757170;float: right;">
+                        <span>Print To Paper</span>  
+                    </button>
+                    <button (click) ="close()" class="btn btn-primary " style="background-color: #757170;float: right;">
+                        <span>Close</span>  
+                    </button>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+    
+</div>
